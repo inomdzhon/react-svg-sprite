@@ -6,11 +6,12 @@ module.exports = {
     extensions: ['', '.js', '.jsx'],
   },
   entry: {
-    app: './src/index',
+    sprite: './src/sprite',
+    inline: './src/inline',
   },
   output: {
     path: path.join(__dirname, '/public_html'),
-    filename: '[name].js',
+    filename: 'app.[name].js',
     publicPath: '/public_html/',
   },
   module: {
