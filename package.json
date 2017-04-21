@@ -30,8 +30,9 @@
     "webpack-dev-server": "1.14.1"
   },
   "dependencies": {
+    "external-svg-sprite-loader": "^2.2.0",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
-    "react-svg-sprite": "^1.0.8"
+    "svgo-loader": "^1.2.1"
   }
 }

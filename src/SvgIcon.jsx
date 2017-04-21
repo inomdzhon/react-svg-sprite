@@ -4,7 +4,7 @@ export default function SvgIcon(props) {
   let classNameArr = ['icon'];
   let otherAttr = Object.assign({}, props);
 
-  classNameArr.push('icon_' + props.name);
+  classNameArr.push('icon_' + props.name.replace(/.*#/, ''));
   classNameArr.push(props.className || '');
 
   delete otherAttr.name;
@@ -12,7 +12,7 @@ export default function SvgIcon(props) {
 
   return (
     <svg className={classNameArr.join(' ').trim()} {...otherAttr}>
-      <use xlinkHref={`#${props.name}`} />
+      <use xlinkHref={props.name} />
     </svg>
   )
 }

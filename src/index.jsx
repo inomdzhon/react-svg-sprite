@@ -2,9 +2,12 @@ require('../styles/app.scss');
 
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
-import SvgSprite from './SvgSprite';
 import SvgIcon from './SvgIcon';
-import svgIconsObject from './svg-icons';
+import iconEmpty from './icons/empty.svg';
+import iconVip from './icons/vip.svg';
+import iconBook from './icons/book.svg';
+import iconAdd from './icons/add.svg';
+import iconClock from './icons/clock.svg';
 
 class App extends Component {
   constructor(props) {
@@ -14,26 +17,26 @@ class App extends Component {
   render() {
     return (
         <div>
+          <h2>Библиотека <a target="_blank" href="https://github.com/Karify/external-svg-sprite-loader">external-svg-sprite-loader </a></h2>
           <ul>
             <li className="clickable">
-              <SvgIcon name="empty" onClick={function() {alert('SVG is awesome!')}} />
+              <SvgIcon name={iconEmpty.symbol} onClick={function() {alert('SVG is awesome!')}} />
               <p>Кликни<br/>на иконку</p>
             </li>
             <li>
-              <SvgIcon name="vip" className="test-hover" />
+              <SvgIcon name={iconVip.symbol} className="test-hover" />
               <p>Наведи<br/>на иконку</p>
             </li>
             <li>
-              <SvgIcon name="book" />
+              <SvgIcon name={iconBook.symbol} />
             </li>
             <li style={{color: 'red'}}>
-              <SvgIcon name="add" />
+              <SvgIcon name={iconAdd.symbol} />
             </li>
             <li>
-              <SvgIcon style={{fill: 'steelblue'}} name="clock" onClick={function() {alert('SVG is awesome!')}} />
+              <SvgIcon style={{fill: 'steelblue'}} name={iconClock.symbol} onClick={function() {alert('SVG is awesome!')}} />
             </li>
           </ul>
-          <SvgSprite symbols={svgIconsObject} />
         </div>
     );
   }
