@@ -30,8 +30,8 @@
     "webpack-dev-server": "1.14.1"
   },
   "dependencies": {
-    "react": "^15.4.2",
-    "react-dom": "^15.4.2",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
     "react-svg-sprite": "^1.0.8"
   }
 }
